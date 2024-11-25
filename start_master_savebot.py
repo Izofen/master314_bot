@@ -370,9 +370,6 @@ def get_data_id (message_info,namebase,nomer):
     db,cursor           = iz_bot.connect (namebot)
     element = {}
     sql = "select id,name,info,data_id from {} where data_id = {}".format(namebase,nomer)
-    
-    print ('[sql]',sql)
-    
     cursor.execute(sql)
     data = cursor.fetchall()
     for rec in data: 
